@@ -49,9 +49,9 @@ body {
 	background: #ddd;
 	width: 100%;
 	height: 200px;
-	border: 4px #222 solid;
+	border: 2px #222 solid;
 	animation: fromPosition 1s;
-	box-shadow: 0 0 15px saddlebrown;
+	box-shadow: 0 0 15px #F4D492;
 }
 
 .squares > div:hover {

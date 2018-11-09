@@ -1,0 +1,171 @@
+* {
+
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Montserrat, Verdana;
+	color: #000;
+	text-align: center;
+	background: #efe8de;
+}
+
+.header {
+	margin: 0;
+	width: 100%;
+	min-height: 15%;
+}
+
+.header h1 {
+	position: relative;
+	color: #222;
+	display: inline-block;
+	border: 2px #222 solid;
+	padding: 10px 20px;
+	animation: move 1s;
+	transition: all .3s ease-out; 
+}
+
+/* MAIN SECTION */
+
+.main {
+	width: 100%;
+	min-height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.squares {
+	width: 70%;
+	margin: auto;
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: repeat(4,1fr);
+}
+
+.squares > div {
+	background: #ddd;
+	width: 100%;
+	height: 200px;
+	border: 4px #222 solid;
+	animation: fromPosition 1s;
+	box-shadow: 0 0 15px saddlebrown;
+}
+
+.squares > div:hover {
+	transform: scale(1.03);
+}
+
+.frame {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.squares img {
+	width: 100px;
+	height: 100px;
+}
+
+/* SOCIAL SECTION */
+
+.social {
+	min-height: 15vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+.social p {
+	margin-right: 10px;
+	text-align: right;
+	font-size: 12px;
+}
+
+i {
+	color: #222;
+	position: relative;
+	padding: 8px;
+	border: 2px #222 solid;
+	border-radius: 50%;
+	transition: all .3s ease-out;
+}
+
+#icon1 {
+	animation: fromLeft 1s;
+}
+
+#icon2 {
+	animation: fromBottom 1s;
+}
+
+#icon3 {
+	animation: fromRight 1s;
+}
+
+i:hover {
+	color: tan;
+	border: 2px tan solid;
+}
+
+@keyframes move {
+	0% {
+		top: -25px;
+		opacity: 0;
+	}
+	
+	100%{
+		top: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes fromLeft {
+	0%{
+		left: -25px;
+		opacity: 0;
+	}
+	
+	100% {
+		left: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes fromBottom {
+	0%{
+		bottom: -25px;
+		opacity: 0;
+	}
+	
+	100% {
+		bottom: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes fromRight {
+	0%{
+		right: -25px;
+		opacity: 0;
+	}
+	
+	100% {
+		right: 0;
+		opacity: 1;
+	}
+}
+
+@keyframes fromPosition {
+	0%{
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
+}
